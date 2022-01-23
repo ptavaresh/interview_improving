@@ -2,6 +2,9 @@
 
 API created in Django which interacts with two endpoints (see below), search endpoint will take one numeric value that will be compared with a list of values stored in Django-ORM Class using model serializer an view, otherwise the search endpoint is a custom endpoint created to just call the amount values stored in sqlite DB and does the calculations.
 
+**NOTE**
+Please click on endpoints links available in this document when you run the local API.
+
 ## endpoints
  http://localhost:8000/search/ [POST]
  - This search endpoint take as request a json object with a amount as key and a number as value.
