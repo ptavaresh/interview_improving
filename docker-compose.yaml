@@ -1,0 +1,19 @@
+version: '3'  # version of compose format 
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: api.dockerfile
+    image: api #travel_api
+    ports:
+      - 8000:8000  # host:container
+  ui:
+    build:
+      context: .
+      dockerfile: ui.dockerfile
+    image: ui #uidocker
+    ports:
+      - 5000:80  # host:container
+    depends_on:
+      - api
